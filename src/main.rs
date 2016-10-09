@@ -6,7 +6,6 @@ use std::io::prelude::*;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    println!("Argument was {}", args[1]);
 
     let path = Path::new(&args[1]);
     let display = path.display();
@@ -19,7 +18,7 @@ fn main() {
     let mut content = String::new();
     match file.read_to_string(&mut content) {
         Err(why) => panic!("Couldn't read from file {} with error {}", display, why.description()),
-        Ok(_) => print!("{} contains:\n {}", display, content),
+        Ok(_) => print!("{}", content),
     }
 
 }
