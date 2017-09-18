@@ -7,3 +7,7 @@ I don't expect anyone to use it.
 Usage
 -----
 `rcat <file_to_open>`
+
+Build
+-----
+`cargo build`
